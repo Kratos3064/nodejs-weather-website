@@ -8,10 +8,15 @@ const forecast = (lat, long, callback) => {
 
         if (body.error) return callback(body.error, undefined)
 
-        const {currently} = body;
+        const { currently } = body;
         const daily = body.daily.data;
-        callback(undefined, daily[0].summary +
-            ' It is currently ' + currently.temperature + ' degrees out. There is a ' + currently.precipProbability + '% chance of rain.');
+        const data = {
+            summary: daily[0].summary +
+                ' It is currently ' + currently.temperature + ' degrees out. There is a ' + currently.precipProbability + '% chance of rain.',
+            hi: 'Temperature High: ' + daily[0].temperatureMax,
+            low: 'Temperature Low: ' + daily[0].temperatureMin,
+        };
+        callback(undefined, data);
     });
 };
 

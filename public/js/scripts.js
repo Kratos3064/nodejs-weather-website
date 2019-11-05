@@ -3,6 +3,8 @@ const searchInput = weatherForm.querySelector('input');
 
 const msg1 = document.getElementById('msg1');
 const msg2 = document.getElementById('msg2');
+const msg3 = document.getElementById('msg3');
+const msg4 = document.getElementById('msg4');
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -18,6 +20,8 @@ weatherForm.addEventListener('submit', (e) => {
 
             msg1.textContent = data.location;
             msg2.textContent = data.forecast;
+            msg3.textContent = data.hi;
+            msg4.textContent = data.low;
         });
     });
 });
