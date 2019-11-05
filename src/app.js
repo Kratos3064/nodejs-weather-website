@@ -23,7 +23,7 @@ app.use(express.static(pubDir));
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        createdBy: 'Created by Ram Pranav'
+        createdBy: 'Created by Ram PranaV'
     })
 });
 
@@ -31,7 +31,7 @@ app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
         about: 'My name is Ram',
-        createdBy: 'Created by Ram Pranav'
+        createdBy: 'Created by Ram PranaV'
     })
 });
 
@@ -39,7 +39,7 @@ app.get('/contact', (req, res) => {
     res.render('contact', {
         title: 'Contact',
         detail: 'Phone No.: 4698733388',
-        createdBy: 'Created by Ram Pranav'
+        createdBy: 'Created by Ram PranaV'
     })
 });
 
@@ -47,7 +47,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
         detail: 'Visit our nearest dealer to help you.',
-        createdBy: 'Created by Ram Pranav'
+        createdBy: 'Created by Ram PranaV'
     })
 });
 
